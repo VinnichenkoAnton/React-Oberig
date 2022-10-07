@@ -1,38 +1,32 @@
-import classNames from 'classnames';
-
 import NavigationItem from '../navigationItem/NavigationItem';
 
 import classes from './Navigation.module.scss';
 
 const navItemArr = [
   {
-    text: 'Coffee house',
+    text: 'Головна',
     to: '/',
   },
   {
-    text: 'Our coffee',
-    to: '/ourcoffee',
+    text: 'Про компанію',
+    to: '/aboutcompany',
   },
   {
-    text: 'For your pleasure',
-    to: '/yourpleasure',
+    text: 'Наші послуги',
+    to: '/services',
+  },
+  {
+    text: 'Контакти',
+    to: '/contacts',
   },
 ];
 
-const Navigation = ({ color, align }) => {
+const Navigation = () => {
   return (
     <nav>
-      <ul className={classNames(classes.navigation, classes[`navigation_${align}`])}>
+      <ul className={classes.navigation}>
         {navItemArr.map((item, i) => {
-          return (
-            <NavigationItem
-              color={color}
-              key={i}
-              text={item.text}
-              to={item.to}
-              exact={item.exact}
-            />
-          );
+          return <NavigationItem key={i} text={item.text} to={item.to} />;
         })}
       </ul>
     </nav>

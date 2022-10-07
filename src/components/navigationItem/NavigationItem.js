@@ -2,12 +2,12 @@ import { NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 import classes from './NavigationItem.module.scss';
 
-const NavigationItem = ({ color, text, to }) => {
+const NavigationItem = ({ text, to }) => {
   return (
-    <li className={classes.navigationitem}>
+    <li className={classes.navitem}>
       <NavLink
         className={({ isActive }) =>
-          classNames(classes.navigationitem_inactive, isActive ? classes.navigationitem_active : '')
+          classNames(classes.navitem_inactive, isActive ? classes.navitem_active : '')
         }
         to={to}
       >

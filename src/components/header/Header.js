@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import Container from '../container/Container';
 import logo from '../../resources/logo.png';
 import SingleContact from '../singleContact/SingleContact';
@@ -14,15 +16,18 @@ const Header = () => {
     <header className={classes.header}>
       <Container>
         <div className={classes.header__wrapper}>
-          <a href="#" className={classes.header__logo}>
+          <NavLink className={classes.header__logo} to="/">
             <img src={logo} alt="Логотип" />
-          </a>
+          </NavLink>
+          {/* <a href="#" className={classes.header__logo}>
+            <img src={logo} alt="Логотип" />
+          </a> */}
           <div className={classes.header__contacts}>
             <SingleContact
-              href="mailto:mirdetstva@gmail.com"
+              href="mailto:mail@gmail.com"
               img={email}
               alt="Пошта"
-              text="mirdetstva@gmail.com"
+              text="mail@gmail.com"
             />
             <SingleContact
               href="tel:+80735707777"

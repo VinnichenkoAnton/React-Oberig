@@ -1,6 +1,7 @@
+@import '../../styles/variables.module.scss';
 .header{
     padding: 21px 0 30px;
-    background: linear-gradient(180deg,#313130 0,#020202 100%);
+    background: $main-color;
     &__wrapper {
         display: flex;
         justify-content: space-between;

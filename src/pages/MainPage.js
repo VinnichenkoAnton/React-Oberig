@@ -1,6 +1,8 @@
 // import { Helmet } from 'react-helmet';
 
 import Header from '../components/header/Header';
+import Slider from '../components/slider/Slider';
+import NumericInfo from '../components/numericInfo/NumericInfo';
 
 const MainPage = () => {
   return (
@@ -13,6 +15,8 @@ const MainPage = () => {
         <title>Coffee shop</title>
       </Helmet> */}
       <Header />
+      <Slider />
+      <NumericInfo />
     </>
   );
 };

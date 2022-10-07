@@ -1,0 +1,10 @@
+@import '../../styles/variables.module.scss';
+
+.navigation {
+    padding: 0 100px 0 100px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white-color;
+}
