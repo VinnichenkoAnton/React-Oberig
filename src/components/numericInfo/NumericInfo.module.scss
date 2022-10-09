@@ -1,0 +1,10 @@
+.numericinfo{
+    min-height: 556px;
+    padding: 130px 0;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
