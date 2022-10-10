@@ -1,0 +1,37 @@
+@import '../../styles/variables.module.scss';
+
+.contactus {
+    position: fixed;
+    z-index: 1000;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__icn {
+        animation: 1s linear iconanimation;
+    }
+    svg {
+        width: 28px;
+        height: 30px;
+    }
+    path {
+        fill: $white-color;
+    }
+}
+
+@keyframes iconanimation {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

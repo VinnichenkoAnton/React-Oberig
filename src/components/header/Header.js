@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom';
 
-import Container from '../container/Container';
-import logo from '../../resources/logo.png';
+import Container from '../UI/container/Container';
 import SingleContact from '../singleContact/SingleContact';
 import Navigation from '../navigation/Navigation';
 
-import email from '../../resources/email.svg';
-import phone from '../../resources/phone.svg';
-import pointer from '../../resources/pointer.svg';
+import logo from '../../resources/header/logo.png';
+import email from '../../resources/header/email.svg';
+import phone from '../../resources/header/phone.svg';
+import pointer from '../../resources/header/pointer.svg';
 
 import classes from './Header.module.scss';
 

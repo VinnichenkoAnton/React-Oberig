@@ -81,7 +81,7 @@ const Slider = function ({ width, height, autoPlay, autoPlayTime }) {
   }, [items.length, slide]); // when images uploaded or slide changed manually we start timer
 
   return (
-    <div
+    <section
       style={{ width, height }}
       className={classes.slider}
       onTouchStart={handleTouchStart}
@@ -100,7 +100,7 @@ const Slider = function ({ width, height, autoPlay, autoPlayTime }) {
         <SlidesList />
         <Dots />
       </SliderContext.Provider>
-    </div>
+    </section>
   );
 };
 

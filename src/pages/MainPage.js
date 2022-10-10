@@ -3,6 +3,8 @@
 import Header from '../components/header/Header';
 import Slider from '../components/slider/Slider';
 import NumericInfo from '../components/numericInfo/NumericInfo';
+import ContactUs from '../components/contactUs/ContactUs';
+import UserForm from '../components/userForm/UserForm';
 
 const MainPage = () => {
   return (
@@ -17,6 +19,8 @@ const MainPage = () => {
       <Header />
       <Slider />
       <NumericInfo />
+      <ContactUs />
+      <UserForm />
     </>
   );
 };

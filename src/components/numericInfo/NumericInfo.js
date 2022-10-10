@@ -1,4 +1,4 @@
-import Container from '../container/Container';
+import Container from '../UI/container/Container';
 import NumericItem from '../numericItem/NumericItem';
 
 import classes from './NumericInfo.module.scss';
