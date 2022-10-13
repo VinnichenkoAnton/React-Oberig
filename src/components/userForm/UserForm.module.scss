@@ -1,0 +1,40 @@
+@import '../../styles/variables.module.scss';
+
+.userform {
+    max-width: 310px;
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #d9dbe4;
+    border-left: 5px solid $main-color;
+    border-radius: 5px;
+    &__wrapper {
+        position: relative;
+    }
+    &__label {
+        transition: all 1s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $main-color;
+        &:empty {
+            
+        }
+    }
+    &__input {
+        width: 100%;
+        display: block;
+        color: $main-color;
+        padding: .5rem 1rem;
+        border: 1px solid $main-color;
+        border-radius: 5px;
+        &:focus, &:visited {
+            border: 2px solid $main-color;
+            outline: 0;
+            + .userform__label {
+                background-color: #fff;
+                top: -10px;
+                left: 10px;
+            }
+        }
+    }
+}

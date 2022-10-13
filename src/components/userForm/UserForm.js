@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Button from '../UI/button/Button';
 import ErrorModal from '../UI/errorModal/ErrorModal';
 
+import classes from './UserForm.module.scss';
+
 const UserForm = () => {
   const [error, setError] = useState(null);
   const [enteredName, setEnteredName] = useState('');
@@ -38,23 +40,33 @@ const UserForm = () => {
   return (
     <>
       {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />}
-      <form onSubmit={formSubmitHandler}>
-        <label htmlFor="username">Ім'я</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          onChange={nameChangeHandler}
-          value={enteredName}
-        />
-        <label htmlFor="userphone">Телефон</label>
-        <input
-          id="userphone"
-          name="userphone"
-          type="number"
-          onChange={phoneChangeHandler}
-          value={enteredPhone}
-        />
+      <form onSubmit={formSubmitHandler} className={classes.userform}>
+        <div className={classes.userform__wrapper}>
+          <input
+            className={classes.userform__input}
+            id="username"
+            name="username"
+            type="text"
+            onChange={nameChangeHandler}
+            value={enteredName}
+          />
+          <label className={classes.userform__label} htmlFor="username">
+            Ім'я
+          </label>
+        </div>
+        <div className={classes.userform__wrapper}>
+          <input
+            className={classes.userform__input}
+            id="userphone"
+            name="userphone"
+            type="number"
+            onChange={phoneChangeHandler}
+            value={enteredPhone}
+          />
+          <label className={classes.userform__label} htmlFor="userphone">
+            Телефон
+          </label>
+        </div>
         <Button type="submit">Відправити</Button>
       </form>
     </>
