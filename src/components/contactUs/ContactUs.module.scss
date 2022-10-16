@@ -2,16 +2,19 @@
 
 .contactus {
     position: fixed;
-    z-index: 1000;
+    z-index: 1;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: $main-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &__btn {
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $main-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     &__icn {
         animation: 1s linear iconanimation;
     }

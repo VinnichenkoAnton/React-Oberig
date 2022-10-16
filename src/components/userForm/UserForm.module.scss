@@ -1,23 +1,42 @@
 @import '../../styles/variables.module.scss';
 
 .userform {
+    position: fixed;
+    z-index: 1;
+    bottom: 88px;
+    right: 20px;
     max-width: 310px;
     background: #fff;
-    padding: 16px;
     border: 1px solid #d9dbe4;
     border-left: 5px solid $main-color;
-    border-radius: 5px;
+    border-radius: 12px;
+    &__card {
+        border-radius: 5px;
+        padding: 16px;
+        width: 100%;
+        background-color: $main-color;
+        text-align: center;
+    }
+    &__title {
+        color: $white-color;
+        font-size: 16px;
+        font-weight: 700;
+    }
     &__wrapper {
         position: relative;
+        padding: 0 16px;
     }
     &__label {
-        transition: all 1s ease-in-out;
+        pointer-events: none;
+        transition: all 0.5s ease-in-out;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 6px;
+        left: 26px;
         color: $main-color;
-        &:empty {
-            
+        &_up {
+            background-color: #fff;
+            top: -10px;
+            left: 26px;
         }
     }
     &__input {
@@ -27,14 +46,15 @@
         padding: .5rem 1rem;
         border: 1px solid $main-color;
         border-radius: 5px;
-        &:focus, &:visited {
-            border: 2px solid $main-color;
-            outline: 0;
-            + .userform__label {
-                background-color: #fff;
-                top: -10px;
-                left: 10px;
-            }
+        &:nth-child(1) {
+            margin-top: 20px;
         }
+        &:focus{
+            outline: 2px solid $main-color;
+        }
+    }
+    &__btn {
+        display: block;
+        margin: 20px auto 20px auto;
     }
 }

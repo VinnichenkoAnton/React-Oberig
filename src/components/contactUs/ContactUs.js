@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import UserForm from '../userForm/UserForm';
+
 import classes from './ContactUs.module.scss';
 
 import { ReactComponent as Chat } from '../../resources/contactUs/chat.svg';
@@ -11,13 +13,16 @@ const ContactUs = () => {
     setOpenForm((prevState) => !prevState);
   };
   return (
-    <button type="button" className={classes.contactus} onClick={clickHandler}>
-      {openForm ? (
-        <Close className={classes.contactus__icn} />
-      ) : (
-        <Chat className={classes.contactus__icn} />
-      )}
-    </button>
+    <section className={classes.contactus}>
+      {openForm && <UserForm />}
+      <button type="button" className={classes.contactus__btn} onClick={clickHandler}>
+        {openForm ? (
+          <Close className={classes.contactus__icn} />
+        ) : (
+          <Chat className={classes.contactus__icn} />
+        )}
+      </button>
+    </section>
   );
 };
 
