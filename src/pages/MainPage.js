@@ -1,9 +1,11 @@
+import ReactDOM from 'react-dom';
 // import { Helmet } from 'react-helmet';
 
 import Header from '../components/header/Header';
 import Slider from '../components/slider/Slider';
 import NumericInfo from '../components/numericInfo/NumericInfo';
 import ContactUs from '../components/contactUs/ContactUs';
+import Tabs from '../components/tabs/Tabs';
 
 const MainPage = () => {
   return (
@@ -15,10 +17,11 @@ const MainPage = () => {
         />
         <title>Coffee shop</title>
       </Helmet> */}
+      {ReactDOM.createPortal(<ContactUs />, document.getElementById('userform'))}
       <Header />
       <Slider />
       <NumericInfo />
-      <ContactUs />
+      <Tabs />
     </>
   );
 };

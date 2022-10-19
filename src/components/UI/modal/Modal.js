@@ -1,8 +1,8 @@
 import Button from '../button/Button';
 
-import classes from './ErrorModal.module.scss';
+import classes from './Modal.module.scss';
 
-const ErrorModal = ({ title, message, onConfirm }) => {
+const Modal = ({ title, message, onConfirm }) => {
   return (
     <>
       <div className={classes.backdrop} onClick={onConfirm} />
@@ -21,4 +21,4 @@ const ErrorModal = ({ title, message, onConfirm }) => {
   );
 };
 
-export default ErrorModal;
+export default Modal;

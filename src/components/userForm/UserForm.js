@@ -3,14 +3,14 @@ import emailjs from '@emailjs/browser';
 import classNames from 'classnames';
 
 import Button from '../UI/button/Button';
-import ErrorModal from '../UI/errorModal/ErrorModal';
+import Modal from '../UI/modal/Modal';
 
 import classes from './UserForm.module.scss';
 
 const UserForm = () => {
   const form = useRef();
   const [labelIsUp, setLabelIsUp] = useState({ nameLabel: false, phoneLabel: false });
-  const [error, setError] = useState(null);
+  const [modal, setModal] = useState(null);
   const [enteredName, setEnteredName] = useState('');
   const [enteredPhone, setEnteredPhone] = useState('');
 
@@ -34,13 +34,13 @@ const UserForm = () => {
     e.preventDefault();
 
     if (enteredName.trim().length === 0 || enteredPhone.trim().length === 0) {
-      setError({
+      setModal({
         title: 'Введіть Ваші дані',
         message: 'Ви не ввели дані в одне з полів для заповнення',
       });
       return;
     } else if (enteredPhone.trim().length !== 10) {
-      setError({
+      setModal({
         title: 'Перевірте коректність номера телефону',
         message: 'Номер телефону має бути введений в форматі "0441234567"',
       });
@@ -49,29 +49,30 @@ const UserForm = () => {
 
     emailjs.sendForm('service_tsh40vc', 'template_8c8jhfn', form.current, 'dotqKKPoRlk7tw9HH').then(
       (result) => {
-        <ErrorModal
-          title="Дякуємо за звернення"
-          message={"Ми зв'яжемося з Вами найближчим часом"}
-          onConfirm={errorHandler}
-        />;
+        setModal({
+          title: 'Дякуємо за звернення',
+          message: "Ми зв'яжемося з Вами найближчим часом",
+        });
       },
       (error) => {
-        <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />;
+        setModal({
+          title: 'Сталася помилка',
+          message:
+            'Ми вже працюємо над вирішенням цієї проблеми. Будь ласка, спробуйте трохи пізніше',
+        });
       },
     );
 
-    console.log(enteredName);
-    console.log(enteredPhone);
     setEnteredName('');
     setEnteredPhone('');
   };
 
   const errorHandler = () => {
-    setError(null);
+    setModal(null);
   };
   return (
     <>
-      {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />}
+      {modal && <Modal title={modal.title} message={modal.message} onConfirm={errorHandler} />}
       <form ref={form} onSubmit={formSubmitHandler} className={classes.userform}>
         <div className={classes.userform__card}>
           <h2 className={classes.userform__title}>

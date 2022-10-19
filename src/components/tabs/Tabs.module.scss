@@ -1,0 +1,10 @@
+.tabs {
+    width: 100%;
+    min-height: 400px;
+    padding: 2rem 1rem;
+    color: #E8F0F2;
+    border-radius: 2rem;
+    @media (max-width: 769px) {
+        padding: 2rem 0;
+    }
+}
