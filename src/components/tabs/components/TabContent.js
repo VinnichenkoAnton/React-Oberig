@@ -1,5 +1,5 @@
 const TabContent = ({ id, activeTab, children }) => {
-  return activeTab === id ? <div className="TabContent">{children}</div> : null;
+  return activeTab === id ? <>{children}</> : null;
 };
 
 export default TabContent;

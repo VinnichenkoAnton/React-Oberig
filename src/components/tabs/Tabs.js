@@ -14,12 +14,22 @@ const Tabs = () => {
   return (
     <section className={classes.tabs}>
       <Container>
-        <ul className="nav">
-          <TabNavItem title="Tab 1" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab} />
-          <TabNavItem title="Tab 2" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab} />
+        <ul className={classes.tabs__nav}>
+          <TabNavItem
+            title="Для приватних осіб"
+            id="tab1"
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
+          <TabNavItem
+            title="Для бізнесу"
+            id="tab2"
+            activeTab={activeTab}
+            setActiveTab={setActiveTab}
+          />
         </ul>
 
-        <div className="outlet">
+        <div className="tabs__outlet">
           <TabContent id="tab1" activeTab={activeTab}>
             <FirstTab />
           </TabContent>
