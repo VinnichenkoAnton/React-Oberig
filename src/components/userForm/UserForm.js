@@ -1,27 +1,17 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import classNames from 'classnames';
 
 import Button from '../UI/button/Button';
 import Modal from '../UI/modal/Modal';
+import Input from '../UI/input/Input';
 
 import classes from './UserForm.module.scss';
 
 const UserForm = () => {
   const form = useRef();
-  const [labelIsUp, setLabelIsUp] = useState({ nameLabel: false, phoneLabel: false });
   const [modal, setModal] = useState(null);
   const [enteredName, setEnteredName] = useState('');
   const [enteredPhone, setEnteredPhone] = useState('');
-
-  const inputBlurHandler = () => {
-    if (labelIsUp.nameLabel && enteredName.trim().length === 0) {
-      setLabelIsUp({ ...labelIsUp, nameLabel: false });
-    }
-    if (labelIsUp.phoneLabel && enteredPhone.trim().length === 0) {
-      setLabelIsUp({ ...labelIsUp, phoneLabel: false });
-    }
-  };
 
   const nameChangeHandler = (e) => {
     setEnteredName(e.target.value);
@@ -79,46 +69,20 @@ const UserForm = () => {
             Введіть, будь ласка, Ваші дані й ми звяжемося з вами найближчим часом
           </h2>
         </div>
-        <div className={classes.userform__wrapper}>
-          <input
-            className={classes.userform__input}
-            name="username"
-            type="text"
-            onChange={nameChangeHandler}
-            onFocus={() => setLabelIsUp({ ...labelIsUp, nameLabel: true })}
-            onBlur={inputBlurHandler}
-            value={enteredName}
-          />
-          <label
-            className={classNames(
-              classes.userform__label,
-              labelIsUp.nameLabel ? classes.userform__label_up : '',
-            )}
-            htmlFor="username"
-          >
-            Ім'я
-          </label>
-        </div>
-        <div className={classes.userform__wrapper}>
-          <input
-            className={classes.userform__input}
-            name="userphone"
-            type="number"
-            onChange={phoneChangeHandler}
-            onFocus={() => setLabelIsUp({ ...labelIsUp, phoneLabel: true })}
-            onBlur={inputBlurHandler}
-            value={enteredPhone}
-          />
-          <label
-            className={classNames(
-              classes.userform__label,
-              labelIsUp.phoneLabel ? classes.userform__label_up : '',
-            )}
-            htmlFor="userphone"
-          >
-            Телефон
-          </label>
-        </div>
+        <Input
+          name="username"
+          type="text"
+          text="Ім'я"
+          enteredValue={enteredName}
+          onChange={nameChangeHandler}
+        />
+        <Input
+          name="userphone"
+          type="number"
+          text="Телефон"
+          enteredValue={enteredPhone}
+          onChange={phoneChangeHandler}
+        />
         <Button type="submit" className={classes.userform__btn}>
           Відправити
         </Button>

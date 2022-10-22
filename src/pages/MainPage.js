@@ -6,6 +6,7 @@ import Slider from '../components/slider/Slider';
 import NumericInfo from '../components/numericInfo/NumericInfo';
 import ContactUs from '../components/contactUs/ContactUs';
 import Tabs from '../components/tabs/Tabs';
+import Advantages from '../components/advantages/Advantages';
 
 const MainPage = () => {
   return (
@@ -22,6 +23,7 @@ const MainPage = () => {
       <Slider />
       <NumericInfo />
       <Tabs />
+      <Advantages />
     </>
   );
 };
