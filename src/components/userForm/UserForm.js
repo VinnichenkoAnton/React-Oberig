@@ -1,9 +1,9 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-import Button from '../UI/button/Button';
-import Modal from '../UI/modal/Modal';
-import Input from '../UI/input/Input';
+import Button from '../UI/Button/Button';
+import Modal from '../UI/Modal/Modal';
+import Input from '../UI/Input/Input';
 
 import classes from './UserForm.module.scss';
 
@@ -38,13 +38,13 @@ const UserForm = () => {
     }
 
     emailjs.sendForm('service_tsh40vc', 'template_8c8jhfn', form.current, 'dotqKKPoRlk7tw9HH').then(
-      (result) => {
+      () => {
         setModal({
           title: 'Дякуємо за звернення',
           message: "Ми зв'яжемося з Вами найближчим часом",
         });
       },
-      (error) => {
+      () => {
         setModal({
           title: 'Сталася помилка',
           message:
@@ -70,18 +70,16 @@ const UserForm = () => {
           </h2>
         </div>
         <Input
-          name="username"
-          type="text"
           text="Ім'я"
           enteredValue={enteredName}
           onChange={nameChangeHandler}
+          attributes={{ name: 'username', type: 'text' }}
         />
         <Input
-          name="userphone"
-          type="number"
           text="Телефон"
           enteredValue={enteredPhone}
           onChange={phoneChangeHandler}
+          attributes={{ name: 'userphone', type: 'number' }}
         />
         <Button type="submit" className={classes.userform__btn}>
           Відправити

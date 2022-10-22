@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import classes from './Input.module.scss';
 
-const Input = ({ name, type, text, enteredValue, onChange }) => {
+const Input = ({ name, type, text, enteredValue, onChange, attributes }) => {
   const [labelIsUp, setLabelIsUp] = useState(false);
   const inputBlurHandler = () => {
     if (labelIsUp && enteredValue.trim().length === 0) {
@@ -21,6 +21,7 @@ const Input = ({ name, type, text, enteredValue, onChange }) => {
         onFocus={() => setLabelIsUp(true)}
         onBlur={inputBlurHandler}
         value={enteredValue}
+        {...attributes}
       />
       <label
         className={classNames(classes.label, labelIsUp ? classes.label_up : '')}

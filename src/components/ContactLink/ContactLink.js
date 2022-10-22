@@ -1,4 +1,4 @@
-import classes from './SingleContact.module.scss';
+import classes from './ContactLink.module.scss';
 
 const SingleContact = ({ href, img, alt, text }) => {
   return (

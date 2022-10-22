@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import Button from '../../UI/button/Button';
+import Button from '../../UI/Button/Button';
 
 import classes from '../Tabs.module.scss';
 

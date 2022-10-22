@@ -1,12 +1,12 @@
 import ReactDOM from 'react-dom';
 // import { Helmet } from 'react-helmet';
 
-import Header from '../components/header/Header';
-import Slider from '../components/slider/Slider';
-import NumericInfo from '../components/numericInfo/NumericInfo';
-import ContactUs from '../components/contactUs/ContactUs';
-import Tabs from '../components/tabs/Tabs';
-import Advantages from '../components/advantages/Advantages';
+import Header from '../components/Header/Header';
+import Slider from '../components/Slider/Slider';
+import NumericInfo from '../components/NumericInfo/NumericInfo';
+import ContactUs from '../components/ContactUs/ContactUs';
+import Tabs from '../components/Tabs/Tabs';
+import Advantages from '../components/Advantages/Advantages';
 
 const MainPage = () => {
   return (

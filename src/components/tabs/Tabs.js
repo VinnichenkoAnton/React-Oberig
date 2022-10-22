@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import Container from '../UI/container/Container.js';
-import FirstTab from './components/FirstTab.js';
-import SecondTab from './components/SecondTab.js';
-import TabNavItem from './components/TabNavItem';
-import TabContent from './components/TabContent';
+import Container from '../UI/Container/Container.js';
+import FirstTab from './TabsComponents/FirstTab.js';
+import SecondTab from './TabsComponents/SecondTab.js';
+import TabNavItem from './TabsComponents/TabNavItem';
+import TabContent from './TabsComponents/TabContent';
 
 import classes from './Tabs.module.scss';
 

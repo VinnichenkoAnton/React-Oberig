@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import UserForm from '../userForm/UserForm';
+import UserForm from '../UserForm/UserForm';
 
 import classes from './ContactUs.module.scss';
 

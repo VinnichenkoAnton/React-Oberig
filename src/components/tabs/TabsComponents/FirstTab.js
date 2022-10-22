@@ -23,12 +23,9 @@ const securityPrivateTypes = [
 ];
 
 const FirstTab = () => {
-  return (
-    <ul className={classes.tabs__firsttab}>
-      {securityPrivateTypes.map((item) => {
-        return <SecurityTypeCard key={item.id} img={item.img} title={item.title} Icn={item.icn} />;
-      })}
-    </ul>
-  );
+  const items = securityPrivateTypes.map((item) => {
+    return <SecurityTypeCard key={item.id} img={item.img} title={item.title} Icn={item.icn} />;
+  });
+  return <ul className={classes.tabs__firsttab}>{items}</ul>;
 };
 export default FirstTab;

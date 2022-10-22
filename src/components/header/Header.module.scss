@@ -8,6 +8,17 @@
         align-items: center;
     }
     &__logo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title{
+        color: $white-color;
+        font-weight: 700;
+        font-size: 24px;
+    }
+    &__icn {
         display: block;
         width: 60px;
         height: 60px;

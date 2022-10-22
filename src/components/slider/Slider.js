@@ -1,9 +1,9 @@
 import React, { useEffect, useState, createContext } from 'react';
 import PropTypes from 'prop-types';
 
-import Arrows from './components/Controls/Arrows';
-import Dots from './components/Controls/Dots';
-import SlidesList from './components/SlidesList';
+import Arrows from './SliderComponents/Controls/Arrows';
+import Dots from './SliderComponents/Controls/Dots';
+import SlidesList from './SliderComponents/SlidesList';
 
 import classes from './Slider.module.scss';
 

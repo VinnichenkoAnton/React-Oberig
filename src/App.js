@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 
-import Spinner from './components/spinner/Spinner';
+import Spinner from './components/Spinner/Spinner';
 import './App.scss';
 
 const MainPage = lazy(() => import('./pages/MainPage'));

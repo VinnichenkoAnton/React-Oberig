@@ -1,5 +1,5 @@
-import Container from '../UI/container/Container';
-import NumericItem from '../numericItem/NumericItem';
+import Container from '../UI/Container/Container';
+import NumericItem from './NumericItem/NumericItem';
 
 import classes from './NumericInfo.module.scss';
 
@@ -15,14 +15,14 @@ const numericItems = [
 ];
 
 const NumericInfo = () => {
+  const numItems = numericItems.map(({ img, title, amount }, index) => {
+    return <NumericItem key={index} img={img} title={title} amount={amount} />;
+  });
+
   return (
     <section className={classes.numericinfo}>
       <Container>
-        <ul className={classes.numericinfo__list}>
-          {numericItems.map(({ img, title, amount }, index) => {
-            return <NumericItem key={index} img={img} title={title} amount={amount} />;
-          })}
-        </ul>
+        <ul className={classes.numericinfo__list}>{numItems}</ul>
       </Container>
     </section>
   );

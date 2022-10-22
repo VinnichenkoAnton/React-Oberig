@@ -1,4 +1,4 @@
-import NavigationItem from '../navigationItem/NavigationItem';
+import NavigationItem from './NavigationItem/NavigationItem';
 
 import classes from './Navigation.module.scss';
 
@@ -22,13 +22,13 @@ const navItemArr = [
 ];
 
 const Navigation = () => {
+  const navItems = navItemArr.map((item, i) => {
+    return <NavigationItem key={i} text={item.text} to={item.to} />;
+  });
+
   return (
     <nav>
-      <ul className={classes.navigation}>
-        {navItemArr.map((item, i) => {
-          return <NavigationItem key={i} text={item.text} to={item.to} />;
-        })}
-      </ul>
+      <ul className={classes.navigation}>{navItems}</ul>
     </nav>
   );
 };
