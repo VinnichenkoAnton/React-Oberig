@@ -1,0 +1,27 @@
+@import '../../../styles/variables.module.scss';
+.advitem {
+    max-width: 300px;
+    min-height: 106px;
+    margin-bottom: 30px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__icn {
+        justify-self: start;
+        width: 50px;
+        height: 50px;
+        path {
+            fill: $main-color;
+        }
+        &_left {
+            order: -1;
+        }
+    }
+    &__description {
+        margin-top: 15px;
+        justify-self: center;
+        text-align: center;
+    }
+}

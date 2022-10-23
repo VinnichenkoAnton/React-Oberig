@@ -1,6 +1,6 @@
 import classes from '../Tabs.module.scss';
 
-const SecurityTypeCard = ({ title, img, Icn }) => {
+const TabItem = ({ title, img, Icn }) => {
   return (
     <li className={classes.tabs__wrapper}>
       <img className={classes.tabs__img} src={img} alt={title} />
@@ -12,4 +12,4 @@ const SecurityTypeCard = ({ title, img, Icn }) => {
   );
 };
 
-export default SecurityTypeCard;
+export default TabItem;

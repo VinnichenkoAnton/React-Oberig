@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import SecurityTypeCard from './TabItem';
+import TabItem from './TabItem';
 import classes from '../Tabs.module.scss';
 
 import { ReactComponent as Enterpreneuricn } from '../../../resources/tabs/business/icns/enterpreneuricn.svg';
@@ -27,7 +27,7 @@ const securityPrivateTypes = [
 
 const SecondTab = () => {
   const items = securityPrivateTypes.map((item) => {
-    return <SecurityTypeCard key={item.id} img={item.img} title={item.title} Icn={item.icn} />;
+    return <TabItem key={item.id} img={item.img} title={item.title} Icn={item.icn} />;
   });
   return <ul className={classes.tabs__firsttab}>{items}</ul>;
 };
