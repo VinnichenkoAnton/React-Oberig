@@ -6,7 +6,7 @@ import Spinner from './components/Spinner/Spinner';
 import './App.scss';
 
 const MainPage = lazy(() => import('./pages/MainPage'));
-// const OurCoffeePage = lazy(() => import('./pages/OurCoffeePage'));
+const AboutCompanyPage = lazy(() => import('./pages/AboutCompanyPage'));
 // const SingleProductPage = lazy(() => import('./pages/SingleProductPage'));
 // const YourPleasurePage = lazy(() => import('./pages/YourPleasurePage'));
 const Page404 = lazy(() => import('./pages/404/404'));
@@ -43,9 +43,8 @@ const AnimatedSwitch = () => {
     <div className={`${transitionStage}`} onAnimationEnd={handleAnimationEnd}>
       <Routes location={displayLocation}>
         <Route path="/" element={<MainPage />} />
+        <Route path="/aboutcompany" element={<AboutCompanyPage />} />
         {/* 
-        <Route path="/ourcoffee" element={<OurCoffeePage />} />
-
         <Route path="/ourcoffee/:id" element={<SingleProductPage />} />
 
         <Route path="/yourpleasure" element={<YourPleasurePage />} /> */}

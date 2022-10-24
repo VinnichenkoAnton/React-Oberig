@@ -11,7 +11,7 @@ import pointer from '../../resources/header/pointer.svg';
 
 import classes from './Header.module.scss';
 
-const Header = () => {
+const Header = ({ sectionTag }) => {
   return (
     <header className={classes.header}>
       <Container>
@@ -22,9 +22,6 @@ const Header = () => {
             </div>
             <h1 className={classes.header__title}>Оберіг</h1>
           </NavLink>
-          {/* <a href="#" className={classes.header__logo}>
-            <img src={logo} alt="Логотип" />
-          </a> */}
           <div className={classes.header__contacts}>
             <ContactLink
               href="mailto:mail@gmail.com"

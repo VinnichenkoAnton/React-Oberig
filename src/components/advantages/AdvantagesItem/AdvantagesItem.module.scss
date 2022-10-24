@@ -1,7 +1,7 @@
 @import '../../../styles/variables.module.scss';
 .advitem {
-    max-width: 300px;
-    min-height: 106px;
+    max-width: 286px;
+    height: 130px;
     margin-bottom: 30px;
     &__wrapper {
         display: flex;
@@ -10,8 +10,8 @@
     }
     &__icn {
         justify-self: start;
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         path {
             fill: $main-color;
         }
