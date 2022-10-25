@@ -1,6 +1,6 @@
 import classes from './ContactLink.module.scss';
 
-const SingleContact = ({ href, img, alt, text }) => {
+const ContactLink = ({ href, img, alt, text }) => {
   return (
     <a href={href} className={classes.contact}>
       <div className={classes.contact__icn}>
@@ -11,4 +11,4 @@ const SingleContact = ({ href, img, alt, text }) => {
   );
 };
 
-export default SingleContact;
+export default ContactLink;

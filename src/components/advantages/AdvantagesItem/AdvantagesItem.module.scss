@@ -15,9 +15,13 @@
         path {
             fill: $main-color;
         }
+        &_right {
+            order: +1;
+        }
         &_left {
             order: -1;
         }
+
     }
     &__description {
         margin-top: 15px;

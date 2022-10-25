@@ -1,0 +1,42 @@
+@import '../../styles/variables.module.scss';
+
+.infocard {
+
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
+    &__wrapper {
+        width: 48%;
+    }
+    &__title {
+        margin-top: 30px;
+        font-size: 18px;
+        color: $main-color;;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__description {
+        display: block;
+        line-height: 22px;
+        font-size: 18px;
+        margin-top: 25px;
+        color: $black-color;
+    }
+    &__img {
+        width: 50%;
+        height: 360px;
+        &_left {
+            order: -1
+        }
+        &_right {
+            order: +1
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    }
+}

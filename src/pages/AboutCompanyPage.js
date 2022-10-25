@@ -2,10 +2,13 @@ import ReactDOM from 'react-dom';
 // import { Helmet } from 'react-helmet';
 
 import Header from '../components/Header/Header';
-import Container from '../components/UI/Container/Container';
-import Title from '../components/Title/Title';
+
 import ContactUs from '../components/ContactUs/ContactUs';
+import OurTeam from '../components/OurTeam/OurTeam';
 import Footer from '../components/Footer/Footer';
+import OurHistory from '../components/OurHistory/OurHistory';
+import Reviews from '../components/Reviews/Reviews';
+import Slider from '../components/Slider/Slider';
 
 const AboutCompanyPage = () => {
   return (
@@ -19,9 +22,10 @@ const AboutCompanyPage = () => {
       </Helmet> */}
       {ReactDOM.createPortal(<ContactUs />, document.getElementById('userform'))}
       <Header />
-      <Container>
-        <Title text="Наша команда" />
-      </Container>
+      <OurTeam />
+      <OurHistory />
+      <Reviews />
+      <Slider />
       <Footer />
     </>
   );

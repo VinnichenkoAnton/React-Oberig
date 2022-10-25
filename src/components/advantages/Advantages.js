@@ -63,6 +63,7 @@ const Advantages = () => {
         subtitle={item.subtitle}
         description={item.description}
         Icn={item.icn}
+        flexOrderChange={false}
       />
     );
   });
@@ -73,7 +74,7 @@ const Advantages = () => {
         subtitle={item.subtitle}
         description={item.description}
         Icn={item.icn}
-        flexOrder={true}
+        flexOrderChange={true}
       />
     );
   });
