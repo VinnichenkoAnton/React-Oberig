@@ -9,6 +9,8 @@ import Tabs from '../components/Tabs/Tabs';
 import Advantages from '../components/Advantages/Advantages';
 import Footer from '../components/Footer/Footer';
 
+import { sliderImages } from '../mocks/mocksData';
+
 const MainPage = () => {
   return (
     <>
@@ -21,7 +23,7 @@ const MainPage = () => {
       </Helmet> */}
       {ReactDOM.createPortal(<ContactUs />, document.getElementById('userform'))}
       <Header />
-      <Slider />
+      <Slider sliderContent={sliderImages} />
       <NumericInfo />
       <Tabs />
       <Advantages />

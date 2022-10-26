@@ -7,24 +7,15 @@ import SlidesList from './SliderComponents/SlidesList';
 
 import classes from './Slider.module.scss';
 
-import img1 from '../../resources/slider/imgs/img1.jpg';
-import img2 from '../../resources/slider/imgs/img2.webp';
-import img3 from '../../resources/slider/imgs/img3.webp';
-const sliderImages = [
-  { img: img1, alt: 'Фото Оберіг 1' },
-  { img: img2, alt: 'Фото Оберіг 2' },
-  { img: img3, alt: 'Фото Оберіг 3' },
-];
-
 export const SliderContext = createContext();
 
-const Slider = function ({ width, height, autoPlay, autoPlayTime }) {
+const Slider = function ({ width, height, autoPlay, autoPlayTime, sliderContent }) {
   const [items, setItems] = useState([]);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
 
   useEffect(() => {
-    setItems(sliderImages);
+    setItems(sliderContent);
   }, []);
 
   const changeSlide = (direction = 1) => {

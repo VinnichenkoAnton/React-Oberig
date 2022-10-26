@@ -43,15 +43,15 @@ const AnimatedSwitch = () => {
     <div className={`${transitionStage}`} onAnimationEnd={handleAnimationEnd}>
       <Routes location={displayLocation}>
         <Route path="/" element={<MainPage />} />
-        <Route path="/aboutcompany" element={<AboutCompanyPage />} />
+        <Route path="aboutcompany" element={<AboutCompanyPage />} />
         {/* 
         <Route path="/ourcoffee/:id" element={<SingleProductPage />} />
 
         <Route path="/yourpleasure" element={<YourPleasurePage />} /> */}
 
-        <Route path="/notfound" element={<Page404 />} />
+        <Route path="notfound" element={<Page404 />} />
 
-        <Route path="*" element={<Navigate to="/notfound" replace />} />
+        <Route path="*" element={<Navigate to="notfound" replace />} />
       </Routes>
     </div>
   );

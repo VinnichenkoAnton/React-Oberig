@@ -10,6 +10,8 @@ import OurHistory from '../components/OurHistory/OurHistory';
 import Reviews from '../components/Reviews/Reviews';
 import Slider from '../components/Slider/Slider';
 
+import { sliderImages } from '../mocks/mocksData';
+
 const AboutCompanyPage = () => {
   return (
     <>
@@ -25,7 +27,7 @@ const AboutCompanyPage = () => {
       <OurTeam />
       <OurHistory />
       <Reviews />
-      <Slider />
+      <Slider sliderContent={sliderImages} />
       <Footer />
     </>
   );

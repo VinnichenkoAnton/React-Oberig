@@ -5,10 +5,7 @@
     text-transform: uppercase;
     color: $white-color;
     text-decoration: none;
-    &_inactive {
-      font-weight: 400;
-    }
     &_active {
-        font-weight: 700;
-  }
+      font-weight: 700;
+   } 
 }
