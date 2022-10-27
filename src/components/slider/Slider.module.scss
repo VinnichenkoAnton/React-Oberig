@@ -13,7 +13,15 @@
 }
 .slide {
   flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   position: relative;
+}
+.slide__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .slide-image {
   display: flex;
@@ -21,10 +29,24 @@
   max-height: 500px;
   width: 100%;
   object-fit: cover;
+  &_subdivided {
+    border-radius: 50%;
+    max-width: 300px;
+  }
+}
+.slide-text {
+  margin-left: 20px;
+  max-width: 400px;
 }
 .slide-title {
+  font-weight: 700;
   text-align: center;
   margin-top: 10px;
+  font-size: 18px;
+}
+.slide-description {
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .dots {

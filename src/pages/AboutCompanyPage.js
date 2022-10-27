@@ -2,15 +2,11 @@ import ReactDOM from 'react-dom';
 // import { Helmet } from 'react-helmet';
 
 import Header from '../components/Header/Header';
-
 import ContactUs from '../components/ContactUs/ContactUs';
 import OurTeam from '../components/OurTeam/OurTeam';
 import Footer from '../components/Footer/Footer';
 import OurHistory from '../components/OurHistory/OurHistory';
 import Reviews from '../components/Reviews/Reviews';
-import Slider from '../components/Slider/Slider';
-
-import { sliderImages } from '../mocks/mocksData';
 
 const AboutCompanyPage = () => {
   return (
@@ -27,7 +23,6 @@ const AboutCompanyPage = () => {
       <OurTeam />
       <OurHistory />
       <Reviews />
-      <Slider sliderContent={sliderImages} />
       <Footer />
     </>
   );

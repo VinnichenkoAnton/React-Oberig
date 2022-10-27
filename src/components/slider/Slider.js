@@ -9,7 +9,15 @@ import classes from './Slider.module.scss';
 
 export const SliderContext = createContext();
 
-const Slider = function ({ width, height, autoPlay, autoPlayTime, sliderContent }) {
+const Slider = function ({
+  width,
+  height,
+  autoPlay,
+  autoPlayTime,
+  sliderContent,
+  controls,
+  subdivided,
+}) {
   const [items, setItems] = useState([]);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
@@ -87,8 +95,8 @@ const Slider = function ({ width, height, autoPlay, autoPlayTime, sliderContent 
           items,
         }}
       >
-        <Arrows />
-        <SlidesList />
+        {controls && <Arrows />}
+        <SlidesList subdivided={subdivided} />
         <Dots />
       </SliderContext.Provider>
     </section>
@@ -100,6 +108,8 @@ Slider.propTypes = {
   autoPlayTime: PropTypes.number,
   width: PropTypes.string,
   height: PropTypes.string,
+  controls: PropTypes.bool,
+  subdivided: PropTypes.bool,
 };
 
 Slider.defaultProps = {
@@ -107,6 +117,8 @@ Slider.defaultProps = {
   autoPlayTime: 4000,
   width: '100%',
   height: '100%',
+  controls: false,
+  subdivided: false,
 };
 
 export default Slider;

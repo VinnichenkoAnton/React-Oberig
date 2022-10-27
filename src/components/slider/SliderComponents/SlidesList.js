@@ -4,7 +4,7 @@ import { SliderContext } from '../Slider';
 
 import classes from '../Slider.module.scss';
 
-export default function SlidesList() {
+export default function SlidesList({ subdivided }) {
   const { slideNumber, items } = useContext(SliderContext);
 
   return (
@@ -13,7 +13,7 @@ export default function SlidesList() {
       style={{ transform: `translateX(-${slideNumber * 100}%)` }}
     >
       {items.map((slide, index) => (
-        <Slide key={index} data={slide} />
+        <Slide subdivided={subdivided} key={index} data={slide} />
       ))}
     </div>
   );

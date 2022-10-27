@@ -2,16 +2,14 @@ import ReactDOM from 'react-dom';
 // import { Helmet } from 'react-helmet';
 
 import Header from '../components/Header/Header';
-import Slider from '../components/Slider/Slider';
-import NumericInfo from '../components/NumericInfo/NumericInfo';
 import ContactUs from '../components/ContactUs/ContactUs';
+import Slider from '../components/Slider/Slider';
 import Tabs from '../components/Tabs/Tabs';
-import Advantages from '../components/Advantages/Advantages';
 import Footer from '../components/Footer/Footer';
 
 import { sliderImages } from '../data/data';
 
-const MainPage = () => {
+const AboutCompanyPage = () => {
   return (
     <>
       {/* <Helmet>
@@ -24,12 +22,10 @@ const MainPage = () => {
       {ReactDOM.createPortal(<ContactUs />, document.getElementById('userform'))}
       <Header />
       <Slider controls={true} sliderContent={sliderImages} />
-      <NumericInfo />
       <Tabs />
-      <Advantages />
       <Footer />
     </>
   );
 };
 
-export default MainPage;
+export default AboutCompanyPage;

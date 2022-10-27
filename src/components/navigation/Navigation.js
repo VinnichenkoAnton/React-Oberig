@@ -2,27 +2,10 @@ import NavigationItem from './NavigationItem/NavigationItem';
 
 import classes from './Navigation.module.scss';
 
-const navItemArr = [
-  {
-    text: 'Головна',
-    to: '/',
-  },
-  {
-    text: 'Про компанію',
-    to: '/aboutcompany',
-  },
-  {
-    text: 'Наші послуги',
-    to: '/services',
-  },
-  {
-    text: 'Контакти',
-    to: '/contacts',
-  },
-];
+import { navigationList } from '../../data/data';
 
 const Navigation = () => {
-  const navItems = navItemArr.map((item, i) => {
+  const navItems = navigationList.map((item, i) => {
     return <NavigationItem key={i} text={item.text} to={item.to} />;
   });
 
