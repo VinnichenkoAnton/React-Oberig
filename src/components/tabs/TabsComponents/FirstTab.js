@@ -5,7 +5,7 @@ import { firstTabList } from '../../../data/data';
 
 const FirstTab = () => {
   const items = firstTabList.map((item) => {
-    return <TabItem key={item.id} img={item.img} title={item.title} Icn={item.icn} />;
+    return <TabItem key={item.id} id={item.id} img={item.img} title={item.title} Icn={item.icn} />;
   });
   return <ul className={classes.tabs__firsttab}>{items}</ul>;
 };

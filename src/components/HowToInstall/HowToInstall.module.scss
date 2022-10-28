@@ -1,0 +1,10 @@
+@import '../../styles/variables.module.scss';
+.howtoinstall {
+    padding: 70px 0;
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}

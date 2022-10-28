@@ -44,6 +44,11 @@ import building from '../resources/tabs/business/imgs/building.jpg';
 import warehouse from '../resources/tabs/business/imgs/warehouse.jpg';
 import industry from '../resources/tabs/business/imgs/industry.jpg';
 
+import { ReactComponent as ContactIcn } from '../resources/howToInstall/contacticn.svg';
+import { ReactComponent as InfoIcn } from '../resources/howToInstall/infoicn.svg';
+import { ReactComponent as MeetingIcn } from '../resources/howToInstall/meetingicn.svg';
+import { ReactComponent as ProtectedIcn } from '../resources/howToInstall/protectedicn.svg';
+
 export const advantagesList = [
   {
     id: uuidv4(),
@@ -141,18 +146,34 @@ export const reviewsList = [
 ];
 
 export const firstTabList = [
-  { id: uuidv4(), title: 'Відеоспостереження', img: video, icn: Videoicn },
-  { id: uuidv4(), title: 'Охорона будинків', img: house, icn: Houseicn },
-  { id: uuidv4(), title: 'Охорона квартир', img: flat, icn: Flaticn },
-  { id: uuidv4(), title: 'Охоронна сигналізація', img: alarm, icn: Alarmicn },
-  { id: uuidv4(), title: 'Охорона житлових комплексів', img: complex, icn: Complexicn },
+  {
+    id: 'ft1',
+    title: 'Відеоспостереження',
+    img: video,
+    icn: Videoicn,
+    description:
+      'Безкоштовна установка. Базовий комплект бездротового обладнання. Цілодобовий моніторинг за об’єктом технічними засобами охорони. Виїзд групи швидкого реагування на сигнал тривоги',
+    eqvprice: 'Від 5000 грн',
+    monthprice: 'Від 300грн/місяць',
+  },
+  { id: 'ft2', title: 'Охорона будинків', img: house, icn: Houseicn },
+  { id: 'ft3', title: 'Охорона квартир', img: flat, icn: Flaticn },
+  { id: 'ft4', title: 'Охоронна сигналізація', img: alarm, icn: Alarmicn },
+  { id: 'ft5', title: 'Охорона житлових комплексів', img: complex, icn: Complexicn },
 ];
 
 export const secondTabList = [
-  { id: uuidv4(), title: 'Охорона підприємств', img: enterpreneur, icn: Enterpreneuricn },
-  { id: uuidv4(), title: 'Охорона магазинів', img: store, icn: Storeicn },
-  { id: uuidv4(), title: 'Охорона офісів', img: office, icn: Officeicn },
-  { id: uuidv4(), title: 'Охоронна будівництва', img: building, icn: Buildingicn },
-  { id: uuidv4(), title: 'Охорона нежитлових приміщень', img: warehouse, icn: Warehouseicn },
-  { id: uuidv4(), title: "Охорона промислових об'єктів", img: industry, icn: Industryicn },
+  { id: 'st1', title: 'Охорона підприємств', img: enterpreneur, icn: Enterpreneuricn },
+  { id: 'st2', title: 'Охорона магазинів', img: store, icn: Storeicn },
+  { id: 'st3', title: 'Охорона офісів', img: office, icn: Officeicn },
+  { id: 'st4', title: 'Охоронна будівництва', img: building, icn: Buildingicn },
+  { id: 'st5', title: 'Охорона нежитлових приміщень', img: warehouse, icn: Warehouseicn },
+  { id: 'st6', title: "Охорона промислових об'єктів", img: industry, icn: Industryicn },
+];
+
+export const howToInstallList = [
+  { id: uuidv4(), title: 'Зателефонуйте/залиште заявку нашому менеджеру', icn: ContactIcn },
+  { id: uuidv4(), title: 'Дізнайтеся все необхідне та домовтесь про зустріч', icn: InfoIcn },
+  { id: uuidv4(), title: 'Зустріч та складання кошторису', icn: MeetingIcn },
+  { id: uuidv4(), title: "Підписання договору та взяття об'єкта під охорону", icn: ProtectedIcn },
 ];

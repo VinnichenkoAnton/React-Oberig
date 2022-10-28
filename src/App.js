@@ -8,7 +8,7 @@ import './App.scss';
 const MainPage = lazy(() => import('./pages/MainPage'));
 const AboutCompanyPage = lazy(() => import('./pages/AboutCompanyPage'));
 const OurServicesPage = lazy(() => import('./pages/OurServicesPage'));
-// const SingleProductPage = lazy(() => import('./pages/SingleProductPage'));
+const SingleProductPage = lazy(() => import('./pages/SingleProductPage'));
 const Page404 = lazy(() => import('./pages/404/404'));
 
 function App() {
@@ -45,10 +45,7 @@ const AnimatedSwitch = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="aboutcompany" element={<AboutCompanyPage />} />
         <Route path="services" element={<OurServicesPage />} />
-        {/* 
-        <Route path="/ourcoffee/:id" element={<SingleProductPage />} />
-
-         */}
+        <Route path="services/:id" element={<SingleProductPage />} />
 
         <Route path="notfound" element={<Page404 />} />
 

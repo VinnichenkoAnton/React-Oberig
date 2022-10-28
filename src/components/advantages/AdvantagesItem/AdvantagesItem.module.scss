@@ -8,6 +8,11 @@
         justify-content: space-between;
         align-items: center;
     }
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 700;
+        color: $black-color;
+    }
     &__icn {
         justify-self: start;
         width: 70px;
@@ -27,5 +32,8 @@
         margin-top: 15px;
         justify-self: center;
         text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        color: $black-color;
     }
 }

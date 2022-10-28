@@ -5,6 +5,7 @@ import Header from '../components/Header/Header';
 import ContactUs from '../components/ContactUs/ContactUs';
 import Slider from '../components/Slider/Slider';
 import Tabs from '../components/Tabs/Tabs';
+import HowToInstall from '../components/HowToInstall/HowToInstall';
 import Footer from '../components/Footer/Footer';
 
 import { sliderImages } from '../data/data';
@@ -23,6 +24,7 @@ const AboutCompanyPage = () => {
       <Header />
       <Slider controls={true} sliderContent={sliderImages} />
       <Tabs />
+      <HowToInstall />
       <Footer />
     </>
   );
