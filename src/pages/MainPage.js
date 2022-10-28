@@ -1,6 +1,6 @@
-import ReactDOM from 'react-dom';
 // import { Helmet } from 'react-helmet';
 
+import Portal from '../components/UI/Portal/Portal';
 import Header from '../components/Header/Header';
 import Slider from '../components/Slider/Slider';
 import NumericInfo from '../components/NumericInfo/NumericInfo';
@@ -21,7 +21,7 @@ const MainPage = () => {
         />
         <title>Coffee shop</title>
       </Helmet> */}
-      {ReactDOM.createPortal(<ContactUs />, document.getElementById('userform'))}
+      <Portal children={<ContactUs />} portalId="userform" />
       <Header />
       <Slider controls={true} sliderContent={sliderImages} />
       <NumericInfo />

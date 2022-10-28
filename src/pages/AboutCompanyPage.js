@@ -1,6 +1,6 @@
-import ReactDOM from 'react-dom';
 // import { Helmet } from 'react-helmet';
 
+import Portal from '../components/UI/Portal/Portal';
 import Header from '../components/Header/Header';
 import ContactUs from '../components/ContactUs/ContactUs';
 import OurTeam from '../components/OurTeam/OurTeam';
@@ -18,7 +18,7 @@ const AboutCompanyPage = () => {
         />
         <title>Coffee shop</title>
       </Helmet> */}
-      {ReactDOM.createPortal(<ContactUs />, document.getElementById('userform'))}
+      <Portal children={<ContactUs />} portalId="userform" />
       <Header />
       <OurTeam />
       <OurHistory />

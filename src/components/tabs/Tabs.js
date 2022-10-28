@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Title from '../Title/Title';
 import FirstTab from './TabsComponents/FirstTab.js';
 import SecondTab from './TabsComponents/SecondTab.js';
 import TabNavItem from './TabsComponents/TabNavItem';
@@ -12,6 +13,7 @@ const Tabs = () => {
 
   return (
     <section className={classes.tabs}>
+      <Title text="Ми пропонуємо" />
       <ul className={classes.tabs__nav}>
         <TabNavItem
           title="Для приватних осіб"
