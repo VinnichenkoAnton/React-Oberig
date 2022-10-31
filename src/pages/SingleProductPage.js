@@ -14,11 +14,11 @@ import { firstTabList } from '../data/data';
 import { secondTabList } from '../data/data';
 
 const SingleProductPage = () => {
-  const jointTabLists = [...firstTabList, ...secondTabList];
   const [singleProduct, setSingleProduct] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
+    const jointTabLists = [...firstTabList, ...secondTabList];
     const filteredList = jointTabLists.filter((item) => item.id === id);
     setSingleProduct(filteredList[0]);
   }, [id]);

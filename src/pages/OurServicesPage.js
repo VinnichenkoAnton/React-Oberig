@@ -8,7 +8,7 @@ import Tabs from '../components/Tabs/Tabs';
 import HowToInstall from '../components/HowToInstall/HowToInstall';
 import Footer from '../components/Footer/Footer';
 
-import { sliderImages } from '../data/data';
+import { sliderImagesList } from '../data/data';
 
 const AboutCompanyPage = () => {
   return (
@@ -22,7 +22,7 @@ const AboutCompanyPage = () => {
       </Helmet> */}
       <Portal children={<ContactUs />} portalId="userform" />
       <Header />
-      <Slider controls={true} sliderContent={sliderImages} />
+      <Slider controls={true} sliderContent={sliderImagesList} />
       <Tabs />
       <HowToInstall />
       <Footer />
