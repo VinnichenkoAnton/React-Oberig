@@ -1,20 +1,25 @@
 import { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 // import { Helmet } from 'react-helmet';
 
 import Header from '../components/Header/Header';
+import GoBack from '../components/GoBack/GoBack';
 import SingleProduct from '../components/SingleProduct/SingleProduct';
+import Portal from '../components/UI/Portal/Portal';
+import ContactUs from '../components/ContactUs/ContactUs';
 import Footer from '../components/Footer/Footer';
 
 import { firstTabList } from '../data/data';
+import { secondTabList } from '../data/data';
 
 const SingleProductPage = () => {
+  const jointTabLists = [...firstTabList, ...secondTabList];
   const [singleProduct, setSingleProduct] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
-    const filteredList = firstTabList.filter((item) => item.id === id);
+    const filteredList = jointTabLists.filter((item) => item.id === id);
     setSingleProduct(filteredList[0]);
   }, [id]);
 
@@ -29,20 +34,8 @@ const SingleProductPage = () => {
       </Helmet> */}
 
       <Header screen="second" title="Our Coffee" />
-      <Link
-        style={{
-          display: 'block',
-          textAlign: 'center',
-          color: '#3f3689',
-          fontWeight: '400',
-          fontSize: '24px',
-          marginTop: '30px',
-          textDecoration: 'underline',
-        }}
-        to="/services"
-      >
-        Повернутися на попередню сторінку
-      </Link>
+      <GoBack />
+
       {singleProduct ? (
         <SingleProduct
           key={singleProduct.id}
@@ -53,6 +46,7 @@ const SingleProductPage = () => {
           eqvprice={singleProduct.eqvprice}
         />
       ) : null}
+      <Portal children={<ContactUs />} portalId="userform" />
 
       <Footer />
     </>

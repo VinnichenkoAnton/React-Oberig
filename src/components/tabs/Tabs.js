@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
 import Title from '../Title/Title';
-import FirstTab from './TabsComponents/FirstTab.js';
-import SecondTab from './TabsComponents/SecondTab.js';
-import TabNavItem from './TabsComponents/TabNavItem';
 import TabContent from './TabsComponents/TabContent';
+import TabNavItem from './TabsComponents/TabNavItem';
+import TabActivity from './TabsComponents/TabActivity';
 
 import classes from './Tabs.module.scss';
+
+import { firstTabList } from '../../data/data';
+import { secondTabList } from '../../data/data';
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState('tab1');
@@ -30,12 +32,12 @@ const Tabs = () => {
       </ul>
 
       <div className="tabs__outlet">
-        <TabContent id="tab1" activeTab={activeTab}>
-          <FirstTab />
-        </TabContent>
-        <TabContent id="tab2" activeTab={activeTab}>
-          <SecondTab />
-        </TabContent>
+        <TabActivity id="tab1" activeTab={activeTab}>
+          <TabContent contentList={firstTabList} />
+        </TabActivity>
+        <TabActivity id="tab2" activeTab={activeTab}>
+          <TabContent contentList={secondTabList} />
+        </TabActivity>
       </div>
     </section>
   );
