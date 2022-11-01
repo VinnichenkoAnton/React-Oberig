@@ -1,0 +1,27 @@
+@import '../../../../styles/variables.module.scss';
+
+.callus {
+    padding-top: 70px;
+    &__subtitle {
+        color: $black-color;
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+    &__contactlink {
+        margin-top: 20px;
+        align-items: center;
+        max-width: 190px;
+        & p {
+            font-size: 18px;
+            color: $black-color;
+        }
+        svg {
+            width: 30px;
+            height: 30px;
+            path{
+                fill: $main-color;
+            }
+        }
+    }
+}
