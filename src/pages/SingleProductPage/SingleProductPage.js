@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Header from '../../layouts/Header/Header';
 import GoBack from '../../components/GoBack/GoBack';
 import SingleProduct from './sections/SingleProduct/SingleProduct';
-import Portal from '../../components/UI/Portal/Portal';
+import Portal from '../../components/Portal/Portal';
 import ContactUs from '../../components/ContactUs/ContactUs';
 import Footer from '../../layouts/Footer/Footer';
 

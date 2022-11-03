@@ -1,13 +1,13 @@
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
-import Button from '../UI/Button/Button';
-import Modal from '../UI/Modal/Modal';
-import Input from '../UI/Input/Input';
+import Button from '../../UI/Button/Button';
+import Modal from '../../UI/Modal/Modal';
+import Input from '../../UI/Input/Input';
 
-import classes from './UserForm.module.scss';
+import classes from './ContactUsForm.module.scss';
 
-const UserForm = () => {
+const ContactUsForm = () => {
   const form = useRef();
   const [modal, setModal] = useState(null);
   const [enteredName, setEnteredName] = useState('');
@@ -63,9 +63,9 @@ const UserForm = () => {
   return (
     <>
       {modal && <Modal title={modal.title} message={modal.message} onConfirm={errorHandler} />}
-      <form ref={form} onSubmit={formSubmitHandler} className={classes.userform}>
-        <div className={classes.userform__card}>
-          <h2 className={classes.userform__title}>
+      <form ref={form} onSubmit={formSubmitHandler} className={classes.contactusform}>
+        <div className={classes.contactusform__card}>
+          <h2 className={classes.contactusform__title}>
             Введіть, будь ласка, Ваші дані й ми звяжемося з вами найближчим часом
           </h2>
         </div>
@@ -81,7 +81,7 @@ const UserForm = () => {
           onChange={phoneChangeHandler}
           attributes={{ name: 'userphone', type: 'number' }}
         />
-        <Button type="submit" className={classes.userform__btn}>
+        <Button type="submit" className={classes.contactusform__btn}>
           Відправити
         </Button>
       </form>
@@ -89,4 +89,4 @@ const UserForm = () => {
   );
 };
 
-export default UserForm;
+export default ContactUsForm;

@@ -1,6 +1,6 @@
 // import { Helmet } from 'react-helmet';
 
-import Portal from '../../components/UI/Portal/Portal';
+import Portal from '../../components/Portal/Portal';
 import Header from '../../layouts/Header/Header';
 import Slider from '../../components/Slider/Slider';
 import NumericInfo from './sections/NumericInfo/NumericInfo';

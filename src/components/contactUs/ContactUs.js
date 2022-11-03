@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import UserForm from '../UserForm/UserForm';
+import ContactUsForm from './ContactUsForm/ContactUsForm';
 
 import classes from './ContactUs.module.scss';
 
@@ -14,7 +14,7 @@ const ContactUs = () => {
   };
   return (
     <section className={classes.contactus}>
-      {openForm && <UserForm />}
+      {openForm && <ContactUsForm />}
       <button type="button" className={classes.contactus__btn} onClick={clickHandler}>
         {openForm ? (
           <Close className={classes.contactus__icn} />
