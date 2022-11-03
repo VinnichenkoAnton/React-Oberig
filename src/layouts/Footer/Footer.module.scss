@@ -14,9 +14,10 @@
         align-items: center;
     }
     &__title{
+        text-transform: uppercase;
         color: $white-color;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 18px;
     }
     &__icn {
         display: block;

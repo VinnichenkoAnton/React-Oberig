@@ -38,9 +38,9 @@ const Footer = () => {
           </div>
         </div>
         <div className={classes.footer__policy}>
-          <a href="#" className="footer__policy-link">
+          <NavLink end to="/policy" className="footer__policy-link">
             Політика конфіденційності
-          </a>
+          </NavLink>
         </div>
       </Container>
     </footer>

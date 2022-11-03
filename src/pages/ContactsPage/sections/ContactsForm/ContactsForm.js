@@ -2,7 +2,10 @@ import { useState, useRef } from 'react';
 import { Formik, Field, Form, ErrorMessage, useField } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
+import { NavLink } from 'react-router-dom';
 
+import Portal from '../../../../components/Portal/Portal';
+import Title from '../../../../components/Title/Title';
 import Container from '../../../../components/UI/Container/Container';
 import Button from '../../../../components/UI/Button/Button';
 import Modal from '../../../../components/UI/Modal/Modal';
@@ -43,9 +46,15 @@ const ContactsForm = () => {
 
   return (
     <>
-      {modal && <Modal title={modal.title} message={modal.message} onConfirm={errorHandler} />}
+      <Portal
+        children={
+          modal && <Modal title={modal.title} message={modal.message} onConfirm={errorHandler} />
+        }
+        portalId="userform"
+      />
       <section className={classes.form}>
         <Container>
+          <Title text="Залиште заявку, і ми зателефонуємо Вам самі" />
           <Formik
             initialValues={{
               name: '',
@@ -96,7 +105,7 @@ const ContactsForm = () => {
               <div className={classes.form__wrapper}>
                 <div className={classes.form__item}>
                   <TextInput
-                    label="Ваше имя"
+                    label="Ваше ім'я"
                     id="name"
                     name="name"
                     type="text"
@@ -124,7 +133,11 @@ const ContactsForm = () => {
               <Field id="text" name="text" as="textarea" />
               <ErrorMessage component="div" className={classes.form__error} name="text" />
               <Checkbox className={classes.form__checkbox} name="terms">
-                Погоджуєтесь з політикою конфіденційності?
+                Погоджуєтесь з{' '}
+                <NavLink className={classes.form__policylink} end to="/policy">
+                  політикою конфіденційності
+                </NavLink>
+                ?
               </Checkbox>
               <Button className={classes.form__button} type="submit">
                 Відправити

@@ -1,0 +1,19 @@
+@import '../../styles/style.module.scss';
+
+.policy {
+    &__title {
+        margin-top: 70px;
+    }
+    &__subtitle {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 700;
+        color: $black-color;
+    }
+    &__li {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 400;
+        color: $black-color;
+    }
+}
