@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet';
+
 import Portal from '../../components/Portal/Portal';
 import ContactUs from '../../components/ContactUs/ContactUs';
 import Container from '../../components/UI/Container/Container';
@@ -11,6 +13,13 @@ import classes from './PolicyPage.module.scss';
 const Policy = () => {
   return (
     <>
+      <Helmet>
+        <meta
+          name="description"
+          content="Cторінка Політика щодо обробки персональних даних сайту Оберіг. Оберіг - охоронная компанія для фізичних осіб та організацій в с.Гатне"
+        />
+        <title>Оберіг</title>
+      </Helmet>
       <Portal children={<ContactUs />} portalId="userform" />
       <Header />
       <Container>

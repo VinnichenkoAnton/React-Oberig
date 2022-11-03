@@ -1,7 +1,7 @@
+import { Helmet } from 'react-helmet';
+
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
-// import { Helmet } from 'react-helmet';
 
 import Header from '../../layouts/Header/Header';
 import GoBack from '../../components/GoBack/GoBack';
@@ -25,13 +25,13 @@ const SingleProductPage = () => {
 
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <meta
           name="description"
-          content={`Here you get the description of ${infoForProduct.name}`}
+          content={`На цій сторінці ви можете більше дізнатися про нашу послугу ${singleProduct.title}`}
         />
-        <title>{`${infoForProduct.name}`}</title>
-      </Helmet> */}
+        <title>{`Оберіг - ${singleProduct.title}`}</title>
+      </Helmet>
 
       <Header screen="second" title="Our Coffee" />
       <GoBack />

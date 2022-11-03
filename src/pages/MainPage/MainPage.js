@@ -1,4 +1,4 @@
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 import Portal from '../../components/Portal/Portal';
 import Header from '../../layouts/Header/Header';
@@ -14,13 +14,13 @@ import { sliderImagesList } from '../../data/data';
 const MainPage = () => {
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <meta
           name="description"
-          content="A main page of the tiny coffee shop for those who like and dont imagine thir life without a cup of cappuccino or espresso"
+          content="Головна сторінка сайту Оберіг. Оберіг - охоронная компанія для фізичних осіб та організацій в с.Гатне"
         />
-        <title>Coffee shop</title>
-      </Helmet> */}
+        <title>Оберіг</title>
+      </Helmet>
       <Portal children={<ContactUs />} portalId="userform" />
       <Header />
       <Slider controls={true} sliderContent={sliderImagesList} />
