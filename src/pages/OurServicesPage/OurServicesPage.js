@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 
 import Portal from '../../components/Portal/Portal';
 import Header from '../../layouts/Header/Header';
@@ -13,13 +13,13 @@ import { sliderImagesList } from '../../data/data';
 const AboutCompanyPage = () => {
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <meta
           name="description"
           content="Cторінка Наші Послуги сайту Оберіг. Оберіг - охоронная компанія для фізичних осіб та організацій в с.Гатне"
         />
         <title>Оберіг</title>
-      </Helmet>
+      </Helmet> */}
       <Portal children={<ContactUs />} portalId="userform" />
       <Header />
       <Slider controls={true} sliderContent={sliderImagesList} />

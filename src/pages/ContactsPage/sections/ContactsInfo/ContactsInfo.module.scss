@@ -50,3 +50,13 @@
         }
     }
 }
+
+@media (max-width: 1199px) {
+    /* 992 */
+    .continfo {
+        &__map {
+            width: 440px;
+            height: 340px;
+        }
+    }
+}
