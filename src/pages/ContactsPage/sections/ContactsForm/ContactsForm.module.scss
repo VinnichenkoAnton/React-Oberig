@@ -80,3 +80,16 @@
     }
 }
 
+@media (max-width: 1199px) {
+    /* 992 */
+    .form {
+        padding: 0 0 35px 0;
+        label {
+            margin-top: 10px;
+        }
+        input {
+            margin-top: 8px;
+        }
+    }
+}
+

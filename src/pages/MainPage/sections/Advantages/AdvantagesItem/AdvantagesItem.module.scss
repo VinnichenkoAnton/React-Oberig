@@ -37,3 +37,10 @@
         color: $black-color;
     }
 }
+
+@media (max-width: 1199px) {
+    /* 992 */
+    .advitem {
+        max-width: 264px;
+    }
+}

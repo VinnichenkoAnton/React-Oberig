@@ -25,5 +25,19 @@
         text-align: center;
         color: $main-color;
     }
+}
 
+@media (max-width: 1199px) {
+    /* 992 */
+    .numericitem__img {
+        width: 150px;
+        height: 150px;
+    }
+    .numericitem__amount {
+        font-size: 58px;
+    }
+}
+
+@media (max-width: 991px) {
+    /* 768 */
 }

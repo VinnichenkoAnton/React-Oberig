@@ -1,4 +1,4 @@
-// import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 import Header from '../../layouts/Header/Header';
 import Slider from '../../components/Slider/Slider';
@@ -11,13 +11,13 @@ import { sliderImagesList } from '../../data/data';
 const ContactsPage = () => {
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <meta
           name="description"
           content="Сторінка контактів сайту компанії Оберіг. Оберіг - охоронная компанія для фізичних осіб та організацій в с.Гатне"
         />
         <title>Оберіг</title>
-      </Helmet> */}
+      </Helmet>
       <Header />
       <Slider controls={true} sliderContent={sliderImagesList} />
       <ContactsInfo />

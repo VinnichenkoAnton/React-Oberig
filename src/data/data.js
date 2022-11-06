@@ -7,8 +7,8 @@ import { ReactComponent as Pointicn } from '../resources/header/pointicn.svg';
 
 //sliderImagesList
 import sliderImage1 from '../resources/slider/imgs/img1.jpg';
-import sliderImage2 from '../resources/slider/imgs/img2.webp';
-import sliderImage3 from '../resources/slider/imgs/img3.webp';
+import sliderImage2 from '../resources/slider/imgs/img2.jpg';
+import sliderImage3 from '../resources/slider/imgs/img3.jpg';
 
 //numericInfoList
 import established from '../resources/numericInfo/established.svg';

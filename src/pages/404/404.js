@@ -1,15 +1,15 @@
+import { Helmet } from 'react-helmet';
 import { NavLink } from 'react-router-dom';
-// import { Helmet } from 'react-helmet';
 
 import classes from './404.module.scss';
 
 const Page404 = () => {
   return (
     <div className={classes.nonexisting}>
-      {/* <Helmet>
+      <Helmet>
         <meta name="description" content="Сторінка, на яку Ви намагаєтессь перейти не існує" />
         <title>404</title>
-      </Helmet> */}
+      </Helmet>
       <p className={classes.nonexisting__title}>404</p>
       <p className={classes.nonexisting__descr}>Page doesn't exist</p>
       <NavLink className={classes.nonexisting__link} to="..">

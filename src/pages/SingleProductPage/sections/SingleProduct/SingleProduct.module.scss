@@ -60,3 +60,18 @@
         }
     }
 }
+
+@media (max-width: 1199px) {
+    /* 992 */
+    .product{
+        &__container {
+            column-gap: 20px;
+        }
+        &__wrapper {
+            padding-top: 5px;
+        }
+        &__img {
+            height: 350px;
+        }
+    }
+}

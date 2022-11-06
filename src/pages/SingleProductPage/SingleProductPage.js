@@ -1,6 +1,6 @@
+import { Helmet } from 'react-helmet';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-// import { Helmet } from 'react-helmet';
 
 import Header from '../../layouts/Header/Header';
 import GoBack from '../../components/GoBack/GoBack';
@@ -24,29 +24,30 @@ const SingleProductPage = () => {
 
   return (
     <>
-      {/* <Helmet>
-        <meta
-          name="description"
-          content={`На цій сторінці ви можете більше дізнатися про нашу послугу ${singleProduct.title}`}
-        />
-        <title>{`Оберіг - ${singleProduct.title}`}</title>
-      </Helmet> */}
-
       <Header screen="second" title="Our Coffee" />
       <GoBack />
 
       {singleProduct ? (
-        <SingleProduct
-          key={singleProduct.id}
-          img={singleProduct.img}
-          title={singleProduct.title}
-          description={singleProduct.description}
-          monthprice={singleProduct.monthprice}
-          eqvprice={singleProduct.eqvprice}
-        />
+        <>
+          <Helmet>
+            <meta
+              name="description"
+              content={`На цій сторінці ви можете більше дізнатися про нашу послугу ${singleProduct.title}`}
+            />
+            <title>{`Оберіг - ${singleProduct.title}`}</title>
+          </Helmet>{' '}
+          <SingleProduct
+            key={singleProduct.id}
+            img={singleProduct.img}
+            title={singleProduct.title}
+            description={singleProduct.description}
+            monthprice={singleProduct.monthprice}
+            eqvprice={singleProduct.eqvprice}
+          />
+        </>
       ) : null}
-      <Portal children={<ContactUs />} portalId="userform" />
 
+      <Portal children={<ContactUs />} portalId="userform" />
       <Footer />
     </>
   );
