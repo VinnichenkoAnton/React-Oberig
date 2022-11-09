@@ -9,6 +9,11 @@
     color: $white-color;
 }
 
+@keyframes fade-in {
+    0% { opacity: 0; height: 0; }
+    100% { opacity: 1; height: 160px; }
+  }
+
 @media (max-width: 767px) {
     /* 576 */
     .navigation {
@@ -16,10 +21,11 @@
         flex-direction: column;
         height: 160px;
         text-align: center;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
         margin-top: 0;
         padding-top: 12px;
+        animation: fade-in 0.5s ease-in;
+        &_hidden {
+            display: none;
+        }
     }
 }

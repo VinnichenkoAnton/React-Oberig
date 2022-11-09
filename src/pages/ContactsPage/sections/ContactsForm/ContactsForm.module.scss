@@ -93,3 +93,14 @@
     }
 }
 
+@media (max-width: 575px) {
+    /* 320 */
+    .form {
+        &__wrapper {
+            flex-direction: column;
+        }
+        &__item {
+            width: 98%;
+        }
+    }
+}

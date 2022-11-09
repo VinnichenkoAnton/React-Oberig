@@ -31,3 +31,10 @@
         outline: 2px solid $main-color;
     }
 }
+
+@media (max-width: 575px) {
+    /* 320 */
+    .input:nth-child(1) {
+        margin-top: 10px;
+    }
+}

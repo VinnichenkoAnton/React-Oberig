@@ -118,3 +118,10 @@
     }
   }
 }
+
+@media (max-width: 575px) {
+  /* 320 */
+  .slide__wrapper {
+    flex-direction: column;
+  }
+}

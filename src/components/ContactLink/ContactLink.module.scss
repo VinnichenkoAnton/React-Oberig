@@ -15,5 +15,15 @@
         color: #fff;
         font-size: 12px;
         margin: 3px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    /* 320 */
+    .contact {
+        &__icn {
+            margin-right: 8px;
+        }
     }
 }

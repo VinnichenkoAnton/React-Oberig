@@ -92,3 +92,18 @@
 
     }
 }
+
+@media (max-width: 575px) {
+    /* 320 */
+    .tabs {
+        &__nav {
+            justify-content: center;
+            gap: 15px;
+        }
+        &__contenttab{
+            grid-template: repeat(2, 300px) / repeat(1, 100%);
+            grid-auto-rows: 300px;
+        }
+    }
+    
+}

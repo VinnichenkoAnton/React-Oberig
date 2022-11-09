@@ -12,3 +12,12 @@
         }
     }
 }
+
+@media (max-width: 575px) {
+    /* 320 */
+    .team {
+        &__wrapper {
+            height: 400px;
+        }
+    }
+}

@@ -47,4 +47,7 @@
 
 @media (max-width: 575px) {
     /* 320 */
+    .advantages__wrapper {
+        flex-direction: column;
+    }
 }

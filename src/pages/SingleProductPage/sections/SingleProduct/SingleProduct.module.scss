@@ -88,3 +88,17 @@
         }
     }
 }
+
+@media (max-width: 575px) {
+    /* 320 */
+    .product {
+        &__container {
+            flex-direction: column;
+        }
+        &__img {
+            margin: 15px 0;
+            order: 2;
+            max-width: 100%;
+        }
+    }
+}

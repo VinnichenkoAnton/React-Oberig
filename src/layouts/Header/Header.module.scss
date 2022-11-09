@@ -53,6 +53,14 @@
     }
 }
 
-
+@media (max-width: 575px) {
+    /* 320 */
+    .header{
+        &__contacts {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}
 
 

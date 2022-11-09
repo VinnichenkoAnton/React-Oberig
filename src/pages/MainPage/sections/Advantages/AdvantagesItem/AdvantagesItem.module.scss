@@ -51,3 +51,12 @@
         margin-bottom: 50px;
     }
 }
+@media (max-width: 575px) {
+    /* 320 */
+    .advitem {
+        max-width: 100%;
+        &__wrapper {
+            justify-content: space-around;
+        }
+    }
+}

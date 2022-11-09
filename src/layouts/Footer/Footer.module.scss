@@ -73,3 +73,15 @@
         }
     }
 }
+
+@media (max-width: 575px) {
+    /* 320 */
+    .footer {
+        &__social {
+            margin: 15px 0;
+        }
+        &__policy {
+            margin-top: 15px;
+        }
+    }
+}

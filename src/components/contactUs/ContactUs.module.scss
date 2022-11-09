@@ -52,3 +52,10 @@
         transform: translateY(0);
     }
 }
+
+@media (max-width: 575px) {
+    /* 320 */
+    .contactus {
+        bottom: 10px;
+    }
+}
