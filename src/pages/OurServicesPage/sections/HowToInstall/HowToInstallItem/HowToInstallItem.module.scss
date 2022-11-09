@@ -48,3 +48,14 @@
         text-align: center;
     }
 }
+
+@media (max-width: 991px) {
+    /* 768 */
+    .howtoinstall {
+        &__item {
+            &:not(:last-child):after {
+                display: none;
+            }
+        }
+    }
+}

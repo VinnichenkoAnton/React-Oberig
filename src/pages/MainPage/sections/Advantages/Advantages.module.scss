@@ -27,3 +27,24 @@
 
     }
 }
+
+@media (max-width: 991px) {
+    /* 768 */
+    .advantages__img {
+        display: none;
+    }
+    .advantages__wrapper {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 767px) {
+    /* 576 */
+    .advantages__wrapper {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 575px) {
+    /* 320 */
+}

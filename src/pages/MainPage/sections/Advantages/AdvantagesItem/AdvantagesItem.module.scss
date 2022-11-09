@@ -44,3 +44,10 @@
         max-width: 264px;
     }
 }
+
+@media (max-width: 767px) {
+    /* 576 */
+    .advitem {
+        margin-bottom: 50px;
+    }
+}

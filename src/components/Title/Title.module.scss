@@ -20,3 +20,19 @@
         background-color: $main-color;
     }
 }
+
+@media (max-width: 991px) {
+    /* 768 */
+    .title {
+        text-align: left;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* 576 */
+    .title {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+}

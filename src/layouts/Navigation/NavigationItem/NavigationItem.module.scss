@@ -10,3 +10,11 @@
       font-weight: 700;
    } 
 }
+
+@media (max-width: 767px) {
+   /* 576 */
+   .navitem {
+      width: 100%;
+      margin-top: 10px;
+   }
+}

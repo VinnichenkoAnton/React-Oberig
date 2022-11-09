@@ -1,7 +1,6 @@
 @import '../../styles/variables.module.scss';
 
 .infocard {
-
     display: flex;
     justify-content: space-between;
     padding-bottom: 70px;
@@ -31,12 +30,35 @@
         &_right {
             order: +1
         }
-
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    /* 768 */
+    .infocard__img {
+        height: 310px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* 576 */
+    .infocard {
+        flex-direction: column;
+        &__title {
+            text-align: center;
+        }
+        &__wrapper {
+            width: 100%;
+            text-align: center;
+        }
+        &__img {
+            width: 100%;
         }
     }
 }

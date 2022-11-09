@@ -8,3 +8,18 @@
     align-items: center;
     color: $white-color;
 }
+
+@media (max-width: 767px) {
+    /* 576 */
+    .navigation {
+        justify-content: space-between;
+        flex-direction: column;
+        height: 160px;
+        text-align: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-top: 0;
+        padding-top: 12px;
+    }
+}

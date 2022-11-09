@@ -22,7 +22,6 @@
         }
     }
     &__description {
-
         color: $black-color;
         font-size: 18px;
         font-weight: 400;
@@ -57,6 +56,30 @@
         &__map {
             width: 440px;
             height: 340px;
+        }
+    }
+}
+@media (max-width: 991px) {
+    /* 768 */
+    .continfo {
+        &__info {
+            max-width: 98%;
+        }
+        &__map {
+            width: 800px;
+            height: 440px;
+        }
+        &__subtitle {
+            text-align: center;
+        }
+        &__contactlink {
+            margin: 20px auto 0 auto;
+        }
+        &__description {
+            text-align: center;
+        }
+        &__map {
+            margin: 15px auto 0 auto;
         }
     }
 }

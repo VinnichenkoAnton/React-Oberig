@@ -58,3 +58,18 @@
         text-align: center;
     }
 }
+
+@media (max-width: 991px) {
+    /* 768 */
+    .footer{
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__logo, &__contacts {
+            margin: 0 auto;
+        }
+        &__policy {
+            margin-top: 10px;
+        }
+    }
+}

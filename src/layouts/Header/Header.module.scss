@@ -43,4 +43,16 @@
 
 @media (max-width: 991px) {
     /* 768 */
+    .header{
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__logo, &__contacts {
+            margin: 0 auto;
+        }
+    }
 }
+
+
+
+
