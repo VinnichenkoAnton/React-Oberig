@@ -6,7 +6,7 @@ import { ReactComponent as Phoneicn } from '../resources/header/phoneicn.svg';
 import { ReactComponent as Pointicn } from '../resources/header/pointicn.svg';
 
 //sliderImagesList
-import sliderImage1 from '../resources/slider/imgs/img1.jpg';
+import sliderImage1 from '../resources/slider/imgs/img1.jpeg';
 import sliderImage2 from '../resources/slider/imgs/img2.jpg';
 import sliderImage3 from '../resources/slider/imgs/img3.jpg';
 

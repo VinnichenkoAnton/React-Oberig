@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import classNames from 'classnames/bind';
 import Slide from './Slide';
 import { SliderContext } from '../Slider';
 
@@ -9,7 +10,10 @@ export default function SlidesList({ subdivided }) {
 
   return (
     <div
-      className={classes['slide-list']}
+      className={classNames(
+        classes['slide-list'],
+        subdivided ? classes['slide-list_subdivided'] : '',
+      )}
       style={{ transform: `translateX(-${slideNumber * 100}%)` }}
     >
       {items.map((slide, index) => (

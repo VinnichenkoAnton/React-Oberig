@@ -11,7 +11,7 @@ const Reviews = () => {
     <section>
       <Container className={classes.reviews}>
         <Title text="Відгуки про компанію" />
-        <Slider sliderContent={reviewsList} autoPlay={false} subdivided={true} />
+        <Slider height="400px" sliderContent={reviewsList} autoPlay={false} subdivided={true} />
       </Container>
     </section>
   );

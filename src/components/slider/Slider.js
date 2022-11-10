@@ -24,7 +24,7 @@ const Slider = function ({
 
   useEffect(() => {
     setItems(sliderContent);
-  }, []);
+  }, [sliderContent]);
 
   const changeSlide = (direction = 1) => {
     let slideNumber = 0;
