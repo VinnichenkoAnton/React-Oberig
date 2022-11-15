@@ -87,7 +87,7 @@
 @media (max-width: 991px) {
     /* 768 */
     .tabs__contenttab{
-        grid-template: repeat(2, 300px) / repeat(2, 50%);
+        grid-template: repeat(2, 300px) / repeat(2, 49%);
         grid-auto-rows: 300px;
 
     }

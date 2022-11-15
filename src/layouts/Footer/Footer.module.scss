@@ -74,6 +74,15 @@
     }
 }
 
+@media (max-width: 767px) {
+    /* 576 */
+    .footer {
+        &__contacts {
+            flex-direction: column;
+        }
+    }
+}
+
 @media (max-width: 575px) {
     /* 320 */
     .footer {

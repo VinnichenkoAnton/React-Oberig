@@ -19,6 +19,15 @@
     }
 }
 
+@media (max-width: 767px) {
+    /* 576 */
+    .contact {
+        &__text {
+            font-size: 16px;
+        }
+    }
+}
+
 @media (max-width: 575px) {
     /* 320 */
     .contact {

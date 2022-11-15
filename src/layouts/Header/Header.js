@@ -34,7 +34,6 @@ const Header = () => {
           </div>
         </div>
         <Navigation isActive={navigationIsVisible} />
-        {/* {navigationIsVisible && <Navigation isActive={navigationIsVisible} */}
       </Container>
     </header>
   );
