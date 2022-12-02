@@ -1,6 +1,7 @@
 @import '../../../styles/variables.module.scss';
 
 .button {
+  width: 238px;
   height: 45px;
   background: $main-color;
   box-shadow: 5px 5px 10px $main-color;
@@ -16,10 +17,14 @@
   transition: 0.5s;
   cursor: pointer;
   outline: 0;
+  &_inactive {
+    background-color: transparent;
+    box-shadow: 0px 0px 5px $main-color;
+    color: $black-color;
   }
+}
   
-  .button:hover,
-  .button:active {
-    box-shadow: 8px 8px 30px $main-color;
-  }
-  
+.button:hover,
+.button:active {
+  box-shadow: 8px 8px 30px $main-color;
+}

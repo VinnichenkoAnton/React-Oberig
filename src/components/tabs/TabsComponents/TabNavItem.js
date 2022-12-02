@@ -1,7 +1,4 @@
-import classNames from 'classnames/bind';
 import Button from '../../UI/Button/Button';
-
-import classes from '../Tabs.module.scss';
 
 const TabNavItem = ({ id, title, activeTab, setActiveTab }) => {
   const handleClick = () => {
@@ -11,11 +8,9 @@ const TabNavItem = ({ id, title, activeTab, setActiveTab }) => {
   return (
     <li onClick={handleClick}>
       <Button
+        onClick={handleClick}
         type="button"
-        className={classNames(
-          classes.tabs__btn,
-          classes[`tabs__btn_${activeTab === id ? 'active' : ''}`],
-        )}
+        buttonActivity={activeTab === id ? '' : 'inactive'}
       >
         {title}
       </Button>
