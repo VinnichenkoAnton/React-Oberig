@@ -4,9 +4,9 @@ React project for Oberig Web-site
 
 ## Installing / Getting started
 
-git clone https://github.com/VinnichenkoAnton/React-Oberig.git
+git clone https://github.com/VinnichenkoAnton/React-Oberig
 
 ## Demo
 
 Home page
-![metaimg](https://user-images.githubusercontent.com/70747904/208101645-dbb2d441-9bdb-4ce9-9762-ebbaa193d90b.jpg)
+![metaimg](https://user-images.githubusercontent.com/70747904/208289771-c5bc0010-85d9-4e4a-883f-195d1b3f1b80.jpg)
